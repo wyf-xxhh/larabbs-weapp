@@ -1,6 +1,6 @@
 <style lang="less">
     @import 'style/weui.less';
-    page{
+    page {
         background-color: #F8F8F8;
         font-size: 16px;
     }
@@ -14,7 +14,7 @@
         padding-left: 15px;
         padding-right: 15px;
     }
-    .page__ft{
+    .page__ft {
         padding-bottom: 10px;
         text-align: center;
     }
@@ -30,15 +30,15 @@
         font-size: 14px;
     }
 </style>
-
 <script>
     import wepy from 'wepy'
-
+    import 'wepy-async-function'
     export default class extends wepy.app {
         config = {
             pages: [
                 'pages/index',
-                'pages/user'
+                'pages/user',
+                'pages/auth/login'
             ],
             window: {
                 backgroundTextStyle: 'light',
@@ -62,12 +62,11 @@
                 selectedColor: '#00b5ad'
             }
         }
-
-        constructor () {
+        constructor() {
             super()
             this.use('requestfix')
+            this.use('promisify')
         }
-
         onLaunch() {
         }
     }

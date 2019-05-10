@@ -1,7 +1,7 @@
 {
 	"description": "larabbs weapp project",
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": false,
 		"postcss": false,
 		"minified": false,
@@ -13,5 +13,7 @@
 	"appid": "wx2cc96aa9100ec379",
 	"projectname": "larabbs-weapp",
 	"miniprogramRoot": "dist/",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {}
 }
